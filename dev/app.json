@@ -1,0 +1,14 @@
+{
+	"pages": [
+		"pages/index/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "wc plugin disabled",
+		"navigationBarTextStyle": "black"
+	},
+	"darkmode": true,
+  "lazyCodeLoading": "requiredComponents",
+	"sitemapLocation": "sitemap.json"
+}
