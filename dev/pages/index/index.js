@@ -3,13 +3,11 @@
  * @Author: lishen
  * @Date: 2023-08-31 16:46:44
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-10 06:09:11
+ * @LastEditTime: 2024-06-10 07:37:42
  */
 const { WxCalendar } = require('@lspriv/wx-calendar/lib');
-const { MultiPlugin, MULTI_PLUGIN_KEY } = require('@lspriv/wc-plugin-multiple');
 const { DisabledPlugin, DISABLED_PLUGIN_KEY } = require('../../plugins/wc-plugin-disabled/index');
 
-WxCalendar.use(MultiPlugin);
 WxCalendar.use(DisabledPlugin);
 
 Page({

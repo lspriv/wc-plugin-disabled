@@ -1,4 +1,4 @@
-## Wx Calendar Plugin For MultiSelector
+## Wx Calendar Plugin For Disabled
 ![NPM Version](https://img.shields.io/npm/v/@lspriv/wc-plugin-disabled)
 ![Static Badge](https://img.shields.io/badge/coverage-later-a9a9a9)
 ![GitHub License](https://img.shields.io/github/license/lspriv/wc-plugin-disabled)
@@ -7,7 +7,7 @@
 
 ### 使用
 - 小程序基础库 `SDKVersion` >= 3.0.0
-- 日历组件 [`wx-calendar`](https://github.com/lspriv/wx-calendar) >= 1.7.0
+- 日历组件 [`wx-calendar`](https://github.com/lspriv/wx-calendar) >= 1.7.1
 
 #### 安装
 ```bash
