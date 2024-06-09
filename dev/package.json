@@ -1,0 +1,11 @@
+{
+  "name": "wc-plugin-disabled-dev",
+  "version": "1.0.0",
+  "description": "日历多选插件",
+  "author": "lspriv",
+  "license": "MIT",
+  "dependencies": {
+    "@lspriv/wx-calendar": "^1.7.1-alpha.9",
+    "@lspriv/wc-plugin-multiple": "^1.0.1"
+  }
+}
