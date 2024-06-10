@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/lspriv/wc-plugin-disabled/compare/v1.0.0...v1.0.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* 解决filter方法错误 ([afb6ddd](https://github.com/lspriv/wc-plugin-disabled/commit/afb6ddde0b64524fff9a58f3edfe1bc870a09268))
+
 ## 1.0.0 (2024-06-09)
 
 
