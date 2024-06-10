@@ -1,6 +1,6 @@
 {
   "name": "@lspriv/wc-plugin-disabled",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "小程序日历组件日期禁用插件",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",

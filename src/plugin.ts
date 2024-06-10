@@ -4,7 +4,7 @@
  * See File LICENSE for detail or copy at https://opensource.org/licenses/MIT
  * @Description: Description
  * @Author: lspriv
- * @LastEditTime: 2024-06-10 07:20:15
+ * @LastEditTime: 2024-06-10 08:48:05
  */
 import {
   type Plugin,
@@ -139,27 +139,27 @@ export class DisabledPlugin implements Plugin {
       if (Array.isArray(item)) {
         const arr: Array<CalendarDay | DateRange> = [];
         let [start, end] = timestampRange(item);
-        for (let i = start; i <= end; i += 86400000) {
+        const afterend = end + 86400000;
+        for (let i = start; i <= afterend; i += 86400000) {
           const date = normalDate(i);
-          if (this.isDateDisabled(date)) {
-            const { year: y1, month: m1, day: d1 } = date;
+          if (this.isDateDisabled(date) || i === afterend) {
             if (i > start) {
               const last = i - 86400000;
+              const { year: y1, month: m1, day: d1 } = normalDate(start);
               if (last <= start) arr.push({ year: y1, month: m1, day: d1 });
               else {
-                const { year: y2, month: m2, day: d2 } = normalDate(start);
-                const { year: y3, month: m3, day: d3 } = normalDate(last);
+                const { year: y2, month: m2, day: d2 } = normalDate(last);
                 arr.push([
-                  { year: y2, month: m2, day: d2 },
-                  { year: y3, month: m3, day: d3 }
+                  { year: y1, month: m1, day: d1 },
+                  { year: y2, month: m2, day: d2 }
                 ]);
               }
             }
             start = i + 86400000;
           }
         }
-        return arr.length ? arr : item;
-      } else return this.isDateDisabled(item) ? [] : item;
+        return arr;
+      } else return item && this.isDateDisabled(item) ? [] : item || [];
     });
   }
 
